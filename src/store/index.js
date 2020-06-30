@@ -5,10 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    count: 100
   },
   mutations: {
+    add(state, value) {
+      state.count = value
+    }
   },
   actions: {
+    addAction(context) {
+      context.commit('add', this.state.count + 1)
+    }
   },
   modules: {
   }
