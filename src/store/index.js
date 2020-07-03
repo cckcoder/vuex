@@ -1,22 +1,24 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    count: 100
+    count: 0,
   },
   mutations: {
-    add(state, value) {
-      state.count = value
-    }
+    setCount(state, value) {
+      state.count = value;
+    },
   },
   actions: {
     addAction(context) {
-      context.commit('add', this.state.count + 1)
-    }
+      context.commit("setCount", this.state.count + 1);
+    },
+    delAction(context) {
+      context.commit("setCount", this.state.count - 1);
+    },
   },
-  modules: {
-  }
-})
+  modules: {},
+});

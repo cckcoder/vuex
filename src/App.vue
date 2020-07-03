@@ -4,16 +4,21 @@
     <hr>
     <br>
     <CompA />
+    <hr>
+    <br>
+    <CompB />
   </div>
 </template>
 
 <script>
 import CompA from '@/components/CompA';
+import CompB from '@/components/CompB';
 
 export default {
   name: "app",
   components: {
-    CompA
+    CompA,
+    CompB
   }
 }
 </script>
